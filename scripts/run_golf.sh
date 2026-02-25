@@ -19,6 +19,7 @@ CUDA_VISIBLE_DEVICES=2 python phc/run_hydra.py \
     env.numAMPObsSteps=10 env.episode_length=300 learning.params.config.max_epochs=30000
 #
 #
+WANDB_MODE=disabled 
 export OMP_NUM_THREADS=1
 CUDA_VISIBLE_DEVICES=3 python phc/run_hydra.py \
 project_name=SMPLOlympics num_agents=1 learning=pulse exp_name=golf_pulse env=env_amp_z_golf \
@@ -26,7 +27,7 @@ env.num_envs=256 env.task=HumanoidGolfZ   env.enableTaskObs=True +env.contact_bo
   robot.has_upright_start=True env.shape_resampling_interval=500000  env.motion_file=./sample_data/golf_after_1_upright.pkl \
   headless=True robot.real_weight_porpotion_boxes=False  env.plane.restitution=0.6  env.stateInit=Default \
   env.numAMPObsSteps=10 env.episode_length=300 learning.params.config.max_epochs=30000
- 
+
 
 export OMP_NUM_THREADS=1
 CUDA_VISIBLE_DEVICES=1 python phc/run_hydra.py \

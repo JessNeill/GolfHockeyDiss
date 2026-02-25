@@ -144,3 +144,5 @@ new_trials
 gh-md-toc
 
 /data
+
+*.history
